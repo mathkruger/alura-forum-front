@@ -1,0 +1,6 @@
+<h2>Topicos do Forum</h2>
+<ul *ngIf="topicos">
+  <li *ngFor="let item of topicos">
+    <strong>{{ item.titulo }}</strong> - {{ item.dataCriacao | date: 'dd/MM/yyyy HH:mm' }} <button>Abrir</button>
+  </li>
+</ul>
