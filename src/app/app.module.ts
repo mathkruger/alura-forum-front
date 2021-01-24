@@ -1,3 +1,5 @@
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { TopicCardComponent } from './components/topic-card/topic-card.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -13,8 +15,13 @@ import { HomeComponent } from './pages/home/home.component';
 @NgModule({
   declarations: [
     AppComponent,
+    // Components
+    TopicCardComponent,
+    NavbarComponent,
+
+    // Pages
     LoginComponent,
-    HomeComponent
+    HomeComponent,
   ],
   imports: [
     BrowserModule,

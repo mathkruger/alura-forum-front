@@ -1,0 +1,23 @@
+<nav class="navbar is-black" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="subtitle navbar-item" [routerLink]="['/']">
+      Alura Fórum
+    </a>
+  </div>
+
+  <div *ngIf="authService.Autenticado()" class="navbar-menu">
+    <div class="navbar-start">
+      <!-- Menu talvez? -->
+    </div>
+
+    <div class="navbar-end is-mobile">
+      <div class="navbar-item">
+        <div class="buttons">
+          <button class="button is-primary">
+            <strong>Sair</strong>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
