@@ -1,3 +1,5 @@
+import { TopicDetailComponent } from './components/topic-detail/topic-detail.component';
+import { TopicoDetalheComponent } from './pages/topico-detalhe/topico-detalhe.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { TopicCardComponent } from './components/topic-card/topic-card.component';
 import { BrowserModule } from '@angular/platform-browser';
@@ -18,10 +20,12 @@ import { HomeComponent } from './pages/home/home.component';
     // Components
     TopicCardComponent,
     NavbarComponent,
+    TopicDetailComponent,
 
     // Pages
     LoginComponent,
     HomeComponent,
+    TopicoDetalheComponent
   ],
   imports: [
     BrowserModule,

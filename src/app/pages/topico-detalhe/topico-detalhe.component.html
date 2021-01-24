@@ -1,0 +1,13 @@
+<div *ngIf="topico" class="container">
+  <h1 class="title is-size-3">{{ topico.titulo }} <span class="tag {{ status[topico.status].class }}">{{ status[topico.status].text }}</span></h1>
+  <h2 style="margin-bottom: 1rem;" class="subtitle">
+    Postado por: {{ topico.nomeAutor }}
+  </h2>
+  <textarea class="textarea is-primary" readonly cols="30" rows="10">{{ topico.mensagem }}</textarea>
+
+  <hr />
+
+  <h3 class="title is-size-5">Respostas</h3>
+
+  <app-topic-detail *ngFor="let item of topico.respostas"></app-topic-detail>
+</div>

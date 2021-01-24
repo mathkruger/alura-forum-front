@@ -1,3 +1,4 @@
+import { TopicoDetalheComponent } from './pages/topico-detalhe/topico-detalhe.component';
 import { NaoLoginGuardService } from './services/guardians/nao-login-guard.service';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
@@ -15,11 +16,16 @@ const routes: Routes = [
     path: '',
     component: HomeComponent,
     canActivate: [LoginGuardService]
+  },
+  {
+    path: 'topico/:id',
+    component: TopicoDetalheComponent,
+    canActivate: [LoginGuardService]
   }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { useHash: true })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
