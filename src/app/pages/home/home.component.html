@@ -1,6 +1,10 @@
-<h2>Topicos do Forum</h2>
-<ul *ngIf="topicos">
-  <li *ngFor="let item of topicos">
-    <strong>{{ item.titulo }}</strong> - {{ item.dataCriacao | date: 'dd/MM/yyyy HH:mm' }} <button>Abrir</button>
-  </li>
-</ul>
+<div class="container">
+  <h1 class="title is-size-2 has-text-centered">Tópicos do Fórum</h1>
+
+  <div class="columns is-desktop is-centered">
+    <div *ngFor="let item of topicos" class="column">
+      <app-topic-card [topic]="item"></app-topic-card>
+    </div>
+  </div>
+</div>
+

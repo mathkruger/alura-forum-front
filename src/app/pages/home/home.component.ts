@@ -1,3 +1,5 @@
+import { PaginationResult } from './../../models/pagination-result';
+import { TopicoListagem } from './../../models/topico';
 import { BaseService } from './../../services/base/base.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -10,10 +12,10 @@ export class HomeComponent implements OnInit {
 
   constructor(private service: BaseService) { }
 
-  topicos: any[];
+  topicos: TopicoListagem[];
 
   ngOnInit() {
-    this.service.Get<any>('topicos')
+    this.service.Get<PaginationResult<TopicoListagem>>('topicos')
     .subscribe(item => {
       this.topicos = item.content;
     })
