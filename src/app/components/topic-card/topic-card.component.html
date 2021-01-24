@@ -1,0 +1,22 @@
+<div class="card">
+  <header class="card-header">
+    <p class="card-header-title">
+      {{ topic.titulo }}
+    </p>
+    <span class="card-header-icon">
+      <span class="icon">
+        <i class="fas fa-question-circle"></i>
+      </span>
+    </span>
+  </header>
+  <div class="card-content">
+    <div class="content">
+      {{ topic.mensagem }}
+      <br>
+      <small>{{ topic.dataCriacao | date: 'dd/MM/yyyy HH:mm' }}</small>
+    </div>
+  </div>
+  <footer class="card-footer">
+    <a href="#" class="card-footer-item">Abrir Tópico</a>
+  </footer>
+</div>
