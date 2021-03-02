@@ -1,10 +1,19 @@
 <div class="container">
   <h1 class="title is-size-2 has-text-centered">Tópicos do Fórum</h1>
 
-  <div class="columns is-desktop is-centered">
-    <div *ngFor="let item of topicos" class="column">
+  <div class="columns is-desktop is-centered is-multiline">
+    <div *ngFor="let item of topicos" class="column is-4">
       <app-topic-card [topic]="item"></app-topic-card>
     </div>
+  </div>
+
+  <div class="is-flex is-justify-content-center">
+    <button #novoTopico class="button is-medium is-success is-inverted">
+      <span class="icon">
+        <i class="fas fa-plus"></i>
+      </span>
+      <span>Novo tópico</span>
+    </button>
   </div>
 </div>
 
